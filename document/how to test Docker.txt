@@ -1,0 +1,42 @@
+
+
+		
+		System.out.println("===> To start the Server Online, please on Browser type LOCALHOST URL as below:");
+		System.out.println("===> http://localhost:8080");
+		System.out.println("===> To Open H2 Database on Browser type URL  as below:");
+		System.out.println("===> http://localhost:8080/h2-console/");
+		System.err.println("===> To kill: Web server failed to start. Port 8080 was already in use.");
+		System.err.println("===> On Terminal Run: netstat -ano | findstr :8080");
+		System.err.println("===> Take note of PID Process-ID, e.g: PID is 6436 >> TCP [::]:8080 [::]:0 LISTENING 6436");
+		System.err.println("===> On Terminal Run: taskkill /PID 6436 /F");	
+
+
+cd C:\Users\Family\git\spring-boot-docker
+
+TEST WITH MAVEN
+
+mvn clean compile 
+
+mvn clean install
+
+mvn clean spring-boot:run 
+
+curl -v localhost:8080/api/hello
+
+
+TEST WITH DOCKER
+
+
+cd C:\Users\Family\git\spring-boot-docker\spring-boot-app
+
+
+
+docker --version
+
+docker-compose --version 
+
+"C:\Program Files\Docker\Docker\DockerCli.exe" -SwitchDaemon
+
+C:\Program Files\Docker\Docker\Docker Desktop.exe
+
+docker build -t spring-boot-docker:spring-docker .
